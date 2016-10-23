@@ -7,6 +7,7 @@
  */
 
 namespace demon;
+require_once 'WebSocketWorker.php';
 use demon\WebSocketWorker;
 
 class WebSocketHandler extends WebSocketWorker{
@@ -17,7 +18,6 @@ class WebSocketHandler extends WebSocketWorker{
      */
     protected function onOpen($client, $info)
     {
-
     }
 
     /** вызывается при закрытии соединения клиентом
@@ -45,6 +45,7 @@ class WebSocketHandler extends WebSocketWorker{
 
         # шлем всем сообщение, о том, что пишет один из клиентов
         $message = 'пользователь #' . intval($client) . ' (' . $this->pid . '): ' . strip_tags($data['payload']);
+        echo $message;
         $this->send($message);
         $this->sendHelper($message);
     }

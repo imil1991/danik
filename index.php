@@ -1,5 +1,6 @@
 #!/usr/bin/env php
 <?php
+error_reporting(E_ERROR);
 require_once('WebSocketServer.php');
 use demon\WebSocketServer;
 $config = array(
