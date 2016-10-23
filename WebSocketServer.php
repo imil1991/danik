@@ -35,7 +35,7 @@ class WebSocketServer {
             $WebSocketMaster->start();
         } else { # воркер
             $WebSocketHandler = new WebSocketHandler($server, $master);
-//            $WebSocketHandler->start();
+            $WebSocketHandler->start();
         }
     }
 

@@ -35,6 +35,7 @@ class WebSocketHandler extends WebSocketWorker{
     protected function onMessage($client, $data)
     {
         $data = $this->decode($data);
+
         if (!$data['payload']) {
             return;
         }
@@ -45,7 +46,6 @@ class WebSocketHandler extends WebSocketWorker{
 
         # шлем всем сообщение, о том, что пишет один из клиентов
         $message = 'пользователь #' . intval($client) . ' (' . $this->pid . '): ' . strip_tags($data['payload']);
-        echo $message;
         $this->send($message);
         $this->sendHelper($message);
     }

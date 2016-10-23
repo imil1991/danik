@@ -68,16 +68,16 @@ abstract class WebSocketWorker
 
             if (in_array($this->master, $read)) {  # пришли данные от мастера
                 $data = fread($this->master, 1000);
-
                 $this->onSend($data); # вызываем пользовательский сценарий
-
                 # удаляем мастера из массива, чтобы не обработать его в этом цикле ещё раз
                 unset($read[array_search($this->master, $read)]);
             }
 
             if ($read) { # пришли данные от подключенных клиентов
                 foreach ($read as $client) {
-                    if (isset($this->handshakes[intval($client)])) {
+
+                    # TODO: temporary disable handshakes
+                    if (isset($this->handshakes[intval($client)]) && false) {
                         if ($this->handshakes[intval($client)]) { # если уже было получено рукопожатие от клиента
                             continue; # то до отправки ответа от сервера читать здесь пока ничего не надо
                         }
@@ -89,11 +89,11 @@ abstract class WebSocketWorker
                             if (isset($this->ips[$address[0]]) && $this->ips[$address[0]] > 0) {
                                 @$this->ips[$address[0]]--;
                             }
+
                             @fclose($client);
                         }
                     } else {
                         $data = fread($client, 1000);
-
                         if (!$data) {  # соединение было закрыто
                             unset($this->clients[intval($client)]);
                             unset($this->handshakes[intval($client)]);
@@ -227,7 +227,6 @@ abstract class WebSocketWorker
     {
         $unmaskedPayload = '';
         $decodedData = array();
-
         #  estimate frame type:
         $firstByteBinary = sprintf('%08b', ord($data[0]));
         $secondByteBinary = sprintf('%08b', ord($data[1]));
