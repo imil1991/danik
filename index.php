@@ -8,6 +8,5 @@ $config = array(
     'port' => 8000,
     'workers' => 1,
 );
-
 $WebSocketServer = new WebsocketServer($config);
 $WebSocketServer->start();

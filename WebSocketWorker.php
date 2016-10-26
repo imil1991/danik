@@ -46,6 +46,7 @@ abstract class WebSocketWorker
                 }
             }
 
+
             stream_select($read, $write, $except, null); # обновляем массив сокетов, которые можно обработать
 
             if (in_array($this->server, $read)) {  # на серверный сокет пришёл запрос от нового клиента
@@ -76,8 +77,7 @@ abstract class WebSocketWorker
             if ($read) { # пришли данные от подключенных клиентов
                 foreach ($read as $client) {
 
-                    # TODO: temporary disable handshakes
-                    if (isset($this->handshakes[intval($client)]) && false) {
+                    if (isset($this->handshakes[intval($client)])) {
                         if ($this->handshakes[intval($client)]) { # если уже было получено рукопожатие от клиента
                             continue; # то до отправки ответа от сервера читать здесь пока ничего не надо
                         }
@@ -129,25 +129,18 @@ abstract class WebSocketWorker
 
         if (!$key) {
             # считываем загаловки из соединения
-            $headers = fread($client, 10000);
-            preg_match("/Sec-WebSocket-Key: (.*)\r\n/", $headers, $match);
-
-            if (empty($match[1])) {
-                return false;
+            $data = fread($client, 10000);
+            $decodedData = json_decode($data);
+            if($decodedData->model == 'station'){
+                if($decodedData->action == 'set_id'){
+                    $key = $decodedData->data->id;
+                    if($key == 'master'){
+                        $this->master = $client;
+                    }
+                }
             }
 
-            $key = $match[1];
-
             $this->handshakes[intval($client)] = $key;
-        } else {
-            # отправляем заголовок согласно протоколу вебсокета
-            $SecWebSocketAccept = base64_encode(pack('H*', sha1($key . '258EAFA5-E914-47DA-95CA-C5AB0DC85B11')));
-            $upgrade = "HTTP/1.1 101 Web Socket Protocol Handshake\r\n" .
-                "Upgrade: websocket\r\n" .
-                "Connection: Upgrade\r\n" .
-                "Sec-WebSocket-Accept:$SecWebSocketAccept\r\n\r\n";
-            fwrite($client, $upgrade);
-            unset($this->handshakes[intval($client)]);
         }
 
         return $key;
@@ -225,88 +218,11 @@ abstract class WebSocketWorker
 
     protected function decode($data)
     {
-        $unmaskedPayload = '';
-        $decodedData = array();
-        #  estimate frame type:
-        $firstByteBinary = sprintf('%08b', ord($data[0]));
-        $secondByteBinary = sprintf('%08b', ord($data[1]));
-        $opcode = bindec(substr($firstByteBinary, 4, 4));
-        $isMasked = ($secondByteBinary[0] == '1') ? true : false;
-        $payloadLength = ord($data[1]) & 127;
-
-        #  unmasked frame is received:
-        if (!$isMasked) {
-            return array('type' => '', 'payload' => '', 'error' => 'protocol error (1002)');
-        }
-
-        switch ($opcode) {
-            #  text frame:
-            case 1:
-                $decodedData['type'] = 'text';
-                break;
-
-            case 2:
-                $decodedData['type'] = 'binary';
-                break;
-
-            #  connection close frame:
-            case 8:
-                $decodedData['type'] = 'close';
-                break;
-
-            #  ping frame:
-            case 9:
-                $decodedData['type'] = 'ping';
-                break;
-
-            #  pong frame:
-            case 10:
-                $decodedData['type'] = 'pong';
-                break;
-
-            default:
-                return array('type' => '', 'payload' => '', 'error' => 'unknown opcode (1003)');
-        }
-
-        if ($payloadLength === 126) {
-            $mask = substr($data, 4, 4);
-            $payloadOffset = 8;
-            $dataLength = bindec(sprintf('%08b', ord($data[2])) . sprintf('%08b', ord($data[3]))) + $payloadOffset;
-        } elseif ($payloadLength === 127) {
-            $mask = substr($data, 10, 4);
-            $payloadOffset = 14;
-            $tmp = '';
-            for ($i = 0; $i < 8; $i++) {
-                $tmp .= sprintf('%08b', ord($data[$i + 2]));
+        $decodedData = json_decode($data);
+        if($decodedData->model == 'station'){
+            if($decodedData->action == 'set_id'){
+                $this->handshakes[$decodedData->data] = $decodedData->data;
             }
-            $dataLength = bindec($tmp) + $payloadOffset;
-            unset($tmp);
-        } else {
-            $mask = substr($data, 2, 4);
-            $payloadOffset = 6;
-            $dataLength = $payloadLength + $payloadOffset;
-        }
-
-        /**
-         * We have to check for large frames here. socket_recv cuts at 1024 bytes
-         * so if websocket-frame is > 1024 bytes we have to wait until whole
-         * data is transferd.
-         */
-        if (strlen($data) < $dataLength) {
-            return false;
-        }
-
-        if ($isMasked) {
-            for ($i = $payloadOffset; $i < $dataLength; $i++) {
-                $j = $i - $payloadOffset;
-                if (isset($data[$i])) {
-                    $unmaskedPayload .= $data[$i] ^ $mask[$j % 4];
-                }
-            }
-            $decodedData['payload'] = $unmaskedPayload;
-        } else {
-            $payloadOffset = $payloadOffset - 4;
-            $decodedData['payload'] = substr($data, $payloadOffset);
         }
 
         return $decodedData;
