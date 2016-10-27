@@ -1,0 +1,88 @@
+switch(cmd){
+      case start1:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"start\",\"data\":{\"id\":\"1\"}}",len("{\"model\":\"plug\",\"action\":\"start\",\"data\":{\"id\":\"1\"}}"));
+      break;
+      case start2:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"start\",\"data\":{\"id\":\"2\"}}",len("{\"model\":\"plug\",\"action\":\"start\",\"data\":{\"id\":\"2\"}}"));
+      break;
+      case start3:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"start\",\"data\":{\"id\":\"3\"}}",len("{\"model\":\"plug\",\"action\":\"start\",\"data\":{\"id\":\"3\"}}"));
+      break;
+      case start4:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"start\",\"data\":{\"id\":\"4\"}}",len("{\"model\":\"plug\",\"action\":\"start\",\"data\":{\"id\":\"4\"}}"));
+      break;
+      case stop1:
+        sprintf((char*)TX2,"{\"model\":\"plug\",\"action\":\"stop\",\"data\":{\"id\":\"1\",\"power\":\"%d\"}}",Socket[0].Energy);
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)TX2,len((char*)TX2));
+      break;
+      case stop2:
+        sprintf((char*)TX2,"{\"model\":\"plug\",\"action\":\"stop\",\"data\":{\"id\":\"2\",\"power\":\"%d\"}}",Socket[1].Energy);
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)TX2,len((char*)TX2));
+      break;
+      case stop3:
+        sprintf((char*)TX2,"{\"model\":\"plug\",\"action\":\"stop\",\"data\":{\"id\":\"3\",\"power\":\"%d\"}}",Socket[2].Energy);
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)TX2,len((char*)TX2));break;
+      case stop4:
+        sprintf((char*)TX2,"{\"model\":\"plug\",\"action\":\"stop\",\"data\":{\"id\":\"4\",\"power\":\"%d\"}}",Socket[3].Energy);
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)TX2,len((char*)TX2));break;
+      case dropline:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"station\",\"action\":\"dropline\",\"data\":{\"id\":\"0\"}}",len("{\"model\":\"station\",\"action\":\"dropline\",\"data\":{\"id\":\"0\"}}"));
+      break;
+      case imaxerr1:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"overcurrent\",\"data\":{\"id\":\"1\"}}",len("{\"model\":\"plug\",\"action\":\"overcurrent\",\"data\":{\"id\":\"1\"}}"));
+      break;
+      case imaxerr2:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"overcurrent\",\"data\":{\"id\":\"2\"}}",len("{\"model\":\"plug\",\"action\":\"overcurrent\",\"data\":{\"id\":\"2\"}}"));
+      break;
+      case imaxerr3:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"overcurrent\",\"data\":{\"id\":\"3\"}}",len("{\"model\":\"plug\",\"action\":\"overcurrent\",\"data\":{\"id\":\"3\"}}"));
+      break;
+      case imaxerr4:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"overcurrent\",\"data\":{\"id\":\"4\"}}",len("{\"model\":\"plug\",\"action\":\"overcurrent\",\"data\":{\"id\":\"4\"}}"));
+      break;
+      case opencase:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"station\",\"action\":\"opencase\",\"data\":{\"id\":\"0\"}}",len("{\"model\":\"station\",\"action\":\"opencase\",\"data\":{\"id\":\"0\"}}"));
+      break;
+      case rdy2ch2:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"waiting\",\"data\":{\"id\":\"2\"}}",len("{\"model\":\"plug\",\"action\":\"waiting\",\"data\":{\"id\":\"2\"}}"));
+      break;
+      case rdy2ch3:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"waiting\",\"data\":{\"id\":\"3\"}}",len("{\"model\":\"plug\",\"action\":\"waiting\",\"data\":{\"id\":\"3\"}}"));
+      break;
+      case fault1:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"fault\",\"data\":{\"id\":\"1\"}}",len("{\"model\":\"plug\",\"action\":\"fault\",\"data\":{\"id\":\"1\"}}"));
+      break;
+      case fault2:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"fault\",\"data\":{\"id\":\"2\"}}",len("{\"model\":\"plug\",\"action\":\"fault\",\"data\":{\"id\":\"2\"}}"));
+      break;
+      case fault3:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"fault\",\"data\":{\"id\":\"3\"}}",len("{\"model\":\"plug\",\"action\":\"fault\",\"data\":{\"id\":\"3\"}}"));
+      break;
+      case fault4:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"fault\",\"data\":{\"id\":\"4\"}}",len("{\"model\":\"plug\",\"action\":\"fault\",\"data\":{\"id\":\"4\"}}"));
+      break;
+      case errlock2:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"error_lock\",\"data\":{\"id\":\"2\"}}",len("{\"model\":\"plug\",\"action\":\"error_lock\",\"data\":{\"id\":\"2\"}}"));
+      break;
+      case errlock3:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"error_lock\",\"data\":{\"id\":\"3\"}}",len("{\"model\":\"plug\",\"action\":\"error_lock\",\"data\":{\"id\":\"3\"}}"));
+      break;
+      case reserr2:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"error_pp\",\"data\":{\"id\":\"2\"}}",len("{\"model\":\"plug\",\"action\":\"error_pp\",\"data\":{\"id\":\"2\"}}"));
+      break;
+      case reserr3:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"error_pp\",\"data\":{\"id\":\"3\"}}",len("{\"model\":\"plug\",\"action\":\"error_pp\",\"data\":{\"id\":\"3\"}}"));
+      break;
+      case defblock2:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"block\",\"data\":{\"id\":\"2\"}}",len("{\"model\":\"plug\",\"action\":\"block\",\"data\":{\"id\":\"2\"}}"));
+      break;
+      case defblock3:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"block\",\"data\":{\"id\":\"3\"}}",len("{\"model\":\"plug\",\"action\":\"block\",\"data\":{\"id\":\"3\"}}"));
+      break;
+      case defunblock2:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"unblock\",\"data\":{\"id\":\"2\"}}",len("{\"model\":\"plug\",\"action\":\"unblock\",\"data\":{\"id\":\"2\"}}"));
+      break;
+      case defunblock3:
+        HAL_UART_Transmit_DMA(&huart2,(uint8_t*)"{\"model\":\"plug\",\"action\":\"unblock\",\"data\":{\"id\":\"3\"}}",len("{\"model\":\"plug\",\"action\":\"unblock\",\"data\":{\"id\":\"3\"}}"));
+      break;
+    }

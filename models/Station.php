@@ -13,6 +13,29 @@ class Station {
         print_r($data);
     }
 
+    static $array = [
+      1 => [
+          'id' => '0x030x220xBB0xBB',
+          'balance' => '',
+          'admin' => '',
+      ],
+      2 => [
+          'id' => '0x630x660xBE0xBB',
+          'balance' => '',
+          'admin' => '',
+      ],
+      3 => [
+          'id' => '0x840x520x1A0x2B',
+          'balance' => '',
+          'admin' => '1',
+      ],
+      4 => [
+          'id' => '0x630x630xA90xBB',
+          'balance' => '',
+          'admin' => '1',
+      ],
+    ];
+
     /** Меняет статус розетки пример:
      *  {"model":"station","action":"station_control","data":{"station":"000001", "plug": 1, "status": true }}
      * @param $data
@@ -27,6 +50,19 @@ class Station {
         ];
 
         return $response;
+    }
+
+    public function catd_found($id)
+    {
+        $parce = explode('',$id);
+        $ancii = '';
+        foreach ($parce as $one){
+            $ancii .= ord($one);
+        }
+        echo $ancii.PHP_EOL;
+
+        return $ancii;
+
     }
 
     /** Пакет на остановку заряда:
@@ -66,7 +102,7 @@ class Station {
 
     public function getSeriesById($id)
     {
-        return chr(0xFA) . chr(0xAA) . chr(0x48) . chr(0x3A);
+        return array_filter(self::$array);
     }
 
 }

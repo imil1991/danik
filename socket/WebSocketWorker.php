@@ -130,6 +130,7 @@ abstract class WebSocketWorker
         if (!$key) {
             # считываем загаловки из соединения
             $data = fread($client, 10000);
+            echo $data.PHP_EOL;
             $decodedData = json_decode($data);
             if($decodedData->model == 'station'){
                 if($decodedData->action == 'set_id'){
