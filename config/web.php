@@ -11,5 +11,10 @@ return [
         'newcards' => 'station/updateCart',
         'stationcontrol' => 'station/control',
         'stop-plug' => 'station/stopPlug',
+    ],
+    'remote' => [
+        'host' => '5.101.105.227',
+        'login' => 'root',
+        'password' => '[e1995b&&&a1996r]'
     ]
 ];
