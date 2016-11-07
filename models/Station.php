@@ -1,4 +1,6 @@
 <?php
+namespace Model;
+use Entity\Plug;
 
 /**
  * Created by PhpStorm.
@@ -8,9 +10,11 @@
  */
 class Station {
 
-    public function setId($data)
+    private $station;
+
+    public function __construct($id)
     {
-        print_r($data);
+        $this->station = new \Entity\Station();
     }
 
     static $array = [
@@ -41,28 +45,54 @@ class Station {
      * @param $data
      * @return array
      */
-    public function stationControl($data)
+    public static function stationControl($data)
     {
         $state = $data->station ? 'UNBLOCK' : 'BLOCK';
         $response = [
             'client_id' => $data->station,
-            'message' => $this->prepareMessage($state.'::'.$data->plug)
+            'message' => self::prepareMessage($state.'::'.$data->plug)
         ];
 
         return $response;
     }
 
-    public function catd_found($id)
+
+    /** При обнаружении карты клиента
+     * {"model":"station","action":"card_found","data":{"id":"0x630x630xA90xBB"}}
+     * @param $data
+     * @return mixed
+     */
+    public static function CardFound($data)
     {
-        $parce = explode('',$id);
-        $ancii = '';
-        foreach ($parce as $one){
-            $ancii .= ord($one);
-        }
-        echo $ancii.PHP_EOL;
+        $parse = unpack('C*',$data->id);
+        $cardInfo = self::$array[1];
+        $pack = pack('C*', $cardInfo['balance']);
+        $response['message'] = 'CARD'.$data->id. $pack .$cardInfo['admin'].'\r\n';
 
-        return $ancii;
+        return $response;
 
+    }
+
+    /** При начале потребления тока по розеткам
+     * @param $data
+     * @return array
+     */
+    public function Start($data)
+    {
+        $this->station->setPlugs(
+            (new Plug)
+                ->setPlugStatus($data->id, Plug::STATUS_BUSY)
+        );
+        $newBalance = $this->station->getCard()->getUser()->getBalance() - 1;
+        $this->station->getCard()->getUser()->setBalance($newBalance);
+        $code = $this->station->getCard()->getCode();
+        $isAdmin = $this->station->getCard()->getUser()->getIsAdmin();
+        $response = [
+            'message' => self::prepareMessage('EDIT'.$code.$newBalance.$isAdmin),
+            'client' => 'all'
+        ];
+
+        return $response;
     }
 
     /** Пакет на остановку заряда:
@@ -70,11 +100,11 @@ class Station {
      * @param $data
      * @return array
      */
-    public function stationStopPlug($data)
+    public static function stationStopPlug($data)
     {
         $response = [
             'client_id' => $data->station,
-            'message' => $this->prepareMessage('STOP::'.$data->plug)
+            'message' => self::prepareMessage('STOP::'.$data->plug)
         ];
 
         return $response;
@@ -85,24 +115,19 @@ class Station {
      * @param $data
      * @return array
      */
-    public function updateCart($data)
+    public static function updateCart($data)
     {
-        $series = $this->getSeriesById($data->id);
+        $series = self::$array[$data->id];
         $response = [
-            'message' => $this->prepareMessage('EDIT'.$series.$data->balance.$data->admin.$data->plug)
+            'message' => self::prepareMessage('EDIT'.$series.$data->balance.$data->admin)
         ];
 
         return $response;
     }
 
-    public function prepareMessage($message)
+    public static function prepareMessage($message)
     {
-        return sprintf('%0-10s',$message);
-    }
-
-    public function getSeriesById($id)
-    {
-        return array_filter(self::$array);
+        return $message.'/r/n';
     }
 
 }

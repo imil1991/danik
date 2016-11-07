@@ -46,21 +46,13 @@ abstract class WebSocketWorker
                 }
             }
 
-
             stream_select($read, $write, $except, null); # обновляем массив сокетов, которые можно обработать
 
             if (in_array($this->server, $read)) {  # на серверный сокет пришёл запрос от нового клиента
                 # подключаемся к нему и делаем рукопожатие, согласно протоколу вебсокета
                 if ($client = stream_socket_accept($this->server, -1)) {
-                    $address = explode(':', stream_socket_get_name($client, true));
-                    if (isset($this->ips[$address[0]]) && $this->ips[$address[0]] > 5) { # блокируем более пяти соединий с одного ip
-                        @fclose($client);
-                    } else {
-                        @$this->ips[$address[0]]++;
-
-                        $this->clients[intval($client)] = $client;
-                        $this->handshakes[intval($client)] = array(); # отмечаем, что нужно сделать рукопожатие
-                    }
+                    $this->clients[intval($client)] = $client;
+                    $this->handshakes[intval($client)] = array(); # отмечаем, что нужно сделать рукопожатие
                 }
 
                 # удаляем сервеный сокет из массива, чтобы не обработать его в этом цикле ещё раз
@@ -79,6 +71,9 @@ abstract class WebSocketWorker
 
                     if (isset($this->handshakes[intval($client)])) {
                         if ($this->handshakes[intval($client)]) { # если уже было получено рукопожатие от клиента
+                            $data = fread($client, 1000);
+                            $this->onMessage($client, $data); # вызываем пользовательский сценарий
+                            unset($read[$client]);
                             continue; # то до отправки ответа от сервера читать здесь пока ничего не надо
                         }
 

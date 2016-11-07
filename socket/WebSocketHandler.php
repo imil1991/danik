@@ -8,7 +8,9 @@
 
 namespace demon;
 require_once 'WebSocketWorker.php';
+require_once '../models/Station.php';
 use demon\WebSocketWorker;
+use Model\Station;
 
 class WebSocketHandler extends WebSocketWorker{
 
@@ -34,20 +36,24 @@ class WebSocketHandler extends WebSocketWorker{
      */
     protected function onMessage($client, $data)
     {
-        $data = $this->decode($data);
+        $decodedData = json_decode($data);
+        $action = preg_replace_callback("/(?:^|_)([a-z])/", function($matches) {
+            return strtoupper($matches[1]);
+        }, $decodedData->action);
+        $data = $decodedData->data;
 
-        if (!$data['payload']) {
-            return;
+        $response = [];
+        switch ($decodedData->model){
+            case 'station':
+            {
+                $obj = new Station(intval($client));
+                $response = $obj->$action($data);
+            }break;
         }
 
-        if (!mb_check_encoding($data['payload'], 'utf-8')) {
-            return;
+        if(!empty($response['message'])){
+            @fwrite($client, $response['message']);
         }
-
-        # шлем всем сообщение, о том, что пишет один из клиентов
-        $message = 'пользователь #' . intval($client) . ' (' . $this->pid . '): ' . strip_tags($data['payload']);
-        $this->send($message);
-        $this->sendHelper($message);
     }
 
     /** вызывается при получении сообщения от мастера
@@ -78,7 +84,7 @@ class WebSocketHandler extends WebSocketWorker{
         switch ($decodedData->model){
             case 'station':
                 {
-                    $obj = new \Station();
+                    $obj = new Station();
                     $response = $obj->$action($data);
                 }break;
         }
