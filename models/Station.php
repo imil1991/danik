@@ -95,6 +95,82 @@ class Station {
         return $response;
     }
 
+    /** При окончании потребления тока по розеткам
+     * @param $data
+     */
+    public function Stop($data)
+    {
+        $this->station->setPlugs(
+            (new Plug)
+                ->setPlugStatus($data->id, Plug::STATUS_OPEN)
+        );
+
+        $log = new \Log();
+        $log->add(__CLASS__,'Потреблённая мощность - ' . $data->power .' кВт*час');
+    }
+
+    public function OverCurrent($data)
+    {
+        $log = new \Log();
+        $log->add(__CLASS__,'Превышение максимально допустимого тока по розетке #' . $data->id);
+    }
+
+
+    public function OpenCase($data)
+    {
+        $log = new \Log();
+        $log->add(__CLASS__,'Обнаружено вскрытие станции #' . $data->id);
+    }
+
+    public function Waiting($data)
+    {
+        $log = new \Log();
+        $log->add(__CLASS__,'Переход станции в режим ожидания потребления тока (9 вольт на пилоте) по розетке #' . $data->id);
+    }
+
+    public function Fault($data)
+    {
+        $log = new \Log();
+        $log->add(__CLASS__,'Обнаружение утечки по розетке #' . $data->id);
+    }
+
+
+    public function ErrorLock($data)
+    {
+        $log = new \Log();
+        $log->add(__CLASS__,'Обнаружение ошибки закрытия замка по розетке с пилотом #' . $data->id);
+    }
+
+    public function ErrorPp($data)
+    {
+        $log = new \Log();
+        $log->add(__CLASS__,'Обнаружение ошибки кодирующего резистора по розетке с пилотом #' . $data->id);
+    }
+
+    public function Block($data)
+    {
+        $log = new \Log();
+        $log->add(__CLASS__,'Успешная обработка комманды о блокировке розетки с пилотом #' . $data->id);
+    }
+
+    public function Unblock($data)
+    {
+        $log = new \Log();
+        $log->add(__CLASS__,'Успешноая обработка комманды об окончании блокировке розетки с пилотом #' . $data->id);
+    }
+
+    public function Battery()
+    {
+        $log = new \Log();
+        $log->add(__CLASS__,'Переход на батарейное питание');
+    }
+
+    public function Drop()
+    {
+        $log = new \Log();
+        $log->add(__CLASS__,'Обрыв питающих фаз');
+    }
+
     /** Пакет на остановку заряда:
      *  {"model":"station","action":"station_stop_plug","data":{"station":"000002", "plug": 2}}
      * @param $data
