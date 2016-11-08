@@ -1,0 +1,591 @@
+[Thu Oct 27 14:39:24.558949 2016] [:error] [pid 4683] [client 127.0.0.1:39874] PHP Fatal error:  Class 'Router' not found in /var/www/danik/web/index.php on line 11
+[Thu Oct 27 14:39:24.558973 2016] [:error] [pid 4683] [client 127.0.0.1:39874] PHP Stack trace:
+[Thu Oct 27 14:39:24.558979 2016] [:error] [pid 4683] [client 127.0.0.1:39874] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 14:40:22.393307 2016] [:error] [pid 4717] [client 127.0.0.1:39950] PHP Fatal error:  Class 'Router' not found in /var/www/danik/web/index.php on line 11
+[Thu Oct 27 14:40:22.393325 2016] [:error] [pid 4717] [client 127.0.0.1:39950] PHP Stack trace:
+[Thu Oct 27 14:40:22.393330 2016] [:error] [pid 4717] [client 127.0.0.1:39950] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 14:45:54.297572 2016] [:error] [pid 4736] [client 127.0.0.1:40024] PHP Fatal error:  Class 'Router' not found in /var/www/danik/web/index.php on line 10
+[Thu Oct 27 14:45:54.297593 2016] [:error] [pid 4736] [client 127.0.0.1:40024] PHP Stack trace:
+[Thu Oct 27 14:45:54.297599 2016] [:error] [pid 4736] [client 127.0.0.1:40024] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 14:46:20.905365 2016] [:error] [pid 4680] [client 127.0.0.1:40032] PHP Fatal error:  Class 'Router' not found in /var/www/danik/web/index.php on line 10
+[Thu Oct 27 14:46:20.905383 2016] [:error] [pid 4680] [client 127.0.0.1:40032] PHP Stack trace:
+[Thu Oct 27 14:46:20.905389 2016] [:error] [pid 4680] [client 127.0.0.1:40032] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 14:46:22.266201 2016] [:error] [pid 4681] [client 127.0.0.1:40034] PHP Fatal error:  Class 'Router' not found in /var/www/danik/web/index.php on line 10
+[Thu Oct 27 14:46:22.266222 2016] [:error] [pid 4681] [client 127.0.0.1:40034] PHP Stack trace:
+[Thu Oct 27 14:46:22.266227 2016] [:error] [pid 4681] [client 127.0.0.1:40034] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 14:46:22.665330 2016] [:error] [pid 4682] [client 127.0.0.1:40036] PHP Fatal error:  Class 'Router' not found in /var/www/danik/web/index.php on line 10
+[Thu Oct 27 14:46:22.665350 2016] [:error] [pid 4682] [client 127.0.0.1:40036] PHP Stack trace:
+[Thu Oct 27 14:46:22.665355 2016] [:error] [pid 4682] [client 127.0.0.1:40036] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 14:46:23.000780 2016] [:error] [pid 4683] [client 127.0.0.1:40038] PHP Fatal error:  Class 'Router' not found in /var/www/danik/web/index.php on line 10
+[Thu Oct 27 14:46:23.000796 2016] [:error] [pid 4683] [client 127.0.0.1:40038] PHP Stack trace:
+[Thu Oct 27 14:46:23.000801 2016] [:error] [pid 4683] [client 127.0.0.1:40038] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:15:33.787252 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP Warning:  include(/var/www/danik/models/Station.php): failed to open stream: No such file or directory in /var/www/danik/controllers/StationController.php on line 2
+[Thu Oct 27 15:15:33.787273 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP Stack trace:
+[Thu Oct 27 15:15:33.787288 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:15:33.787292 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:15:33.787295 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP   3. include() /var/www/danik/libs/Router.php:45
+[Thu Oct 27 15:15:33.787302 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP Warning:  include(): Failed opening '/var/www/danik/models/Station.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/danik/controllers/StationController.php on line 2
+[Thu Oct 27 15:15:33.787305 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP Stack trace:
+[Thu Oct 27 15:15:33.787317 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:15:33.787321 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:15:33.787338 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP   3. include() /var/www/danik/libs/Router.php:45
+[Thu Oct 27 15:15:33.787354 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP Warning:  Missing argument 1 for StationController::actionUpdateCart() in /var/www/danik/controllers/StationController.php on line 12
+[Thu Oct 27 15:15:33.787356 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP Stack trace:
+[Thu Oct 27 15:15:33.787359 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:15:33.787362 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:15:33.787364 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:15:33.787368 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:15:33.787373 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP Fatal error:  Class 'Station' not found in /var/www/danik/controllers/StationController.php on line 14
+[Thu Oct 27 15:15:33.787375 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP Stack trace:
+[Thu Oct 27 15:15:33.787378 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:15:33.787380 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:15:33.787383 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:15:33.787386 2016] [:error] [pid 4684] [client 127.0.0.1:40352] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:15:38.515871 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP Warning:  include(/var/www/danik/models/Station.php): failed to open stream: No such file or directory in /var/www/danik/controllers/StationController.php on line 2
+[Thu Oct 27 15:15:38.515890 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP Stack trace:
+[Thu Oct 27 15:15:38.515895 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:15:38.515899 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:15:38.515902 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP   3. include() /var/www/danik/libs/Router.php:45
+[Thu Oct 27 15:15:38.515908 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP Warning:  include(): Failed opening '/var/www/danik/models/Station.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/danik/controllers/StationController.php on line 2
+[Thu Oct 27 15:15:38.515912 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP Stack trace:
+[Thu Oct 27 15:15:38.515914 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:15:38.515918 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:15:38.515920 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP   3. include() /var/www/danik/libs/Router.php:45
+[Thu Oct 27 15:15:38.515936 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP Warning:  Missing argument 1 for StationController::actionUpdateCart() in /var/www/danik/controllers/StationController.php on line 12
+[Thu Oct 27 15:15:38.515938 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP Stack trace:
+[Thu Oct 27 15:15:38.515941 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:15:38.515944 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:15:38.515948 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:54
+[Thu Oct 27 15:15:38.515951 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:54
+[Thu Oct 27 15:15:38.515962 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP Fatal error:  Class 'Station' not found in /var/www/danik/controllers/StationController.php on line 14
+[Thu Oct 27 15:15:38.515964 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP Stack trace:
+[Thu Oct 27 15:15:38.515967 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:15:38.515970 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:15:38.515973 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:54
+[Thu Oct 27 15:15:38.515976 2016] [:error] [pid 4717] [client 127.0.0.1:40354] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:54
+[Thu Oct 27 15:15:41.987325 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP Warning:  include(/var/www/danik/models/Station.php): failed to open stream: No such file or directory in /var/www/danik/controllers/StationController.php on line 2
+[Thu Oct 27 15:15:41.987344 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP Stack trace:
+[Thu Oct 27 15:15:41.987349 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:15:41.987353 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:15:41.987356 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP   3. include() /var/www/danik/libs/Router.php:45
+[Thu Oct 27 15:15:41.987363 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP Warning:  include(): Failed opening '/var/www/danik/models/Station.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/danik/controllers/StationController.php on line 2
+[Thu Oct 27 15:15:41.987366 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP Stack trace:
+[Thu Oct 27 15:15:41.987369 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:15:41.987372 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:15:41.987375 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP   3. include() /var/www/danik/libs/Router.php:45
+[Thu Oct 27 15:15:41.987391 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP Warning:  Missing argument 1 for StationController::actionUpdateCart() in /var/www/danik/controllers/StationController.php on line 12
+[Thu Oct 27 15:15:41.987393 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP Stack trace:
+[Thu Oct 27 15:15:41.987396 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:15:41.987399 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:15:41.987402 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:54
+[Thu Oct 27 15:15:41.987406 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:54
+[Thu Oct 27 15:15:41.987411 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP Fatal error:  Class 'Station' not found in /var/www/danik/controllers/StationController.php on line 14
+[Thu Oct 27 15:15:41.987413 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP Stack trace:
+[Thu Oct 27 15:15:41.987416 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:15:41.987419 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:15:41.987422 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:54
+[Thu Oct 27 15:15:41.987425 2016] [:error] [pid 4736] [client 127.0.0.1:40356] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:54
+[Thu Oct 27 15:16:47.307150 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP Warning:  include(/var/www/danik/models/Station.php): failed to open stream: No such file or directory in /var/www/danik/controllers/StationController.php on line 2
+[Thu Oct 27 15:16:47.307170 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP Stack trace:
+[Thu Oct 27 15:16:47.307175 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:16:47.307179 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:16:47.307182 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP   3. include() /var/www/danik/libs/Router.php:45
+[Thu Oct 27 15:16:47.307188 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP Warning:  include(): Failed opening '/var/www/danik/models/Station.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/danik/controllers/StationController.php on line 2
+[Thu Oct 27 15:16:47.307192 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP Stack trace:
+[Thu Oct 27 15:16:47.307195 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:16:47.307198 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:16:47.307201 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP   3. include() /var/www/danik/libs/Router.php:45
+[Thu Oct 27 15:16:47.307217 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP Warning:  Missing argument 1 for StationController::actionUpdateCart() in /var/www/danik/controllers/StationController.php on line 12
+[Thu Oct 27 15:16:47.307220 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP Stack trace:
+[Thu Oct 27 15:16:47.307223 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:16:47.307226 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:16:47.307229 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:16:47.307233 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:16:47.307238 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP Fatal error:  Class 'Station' not found in /var/www/danik/controllers/StationController.php on line 14
+[Thu Oct 27 15:16:47.307240 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP Stack trace:
+[Thu Oct 27 15:16:47.307243 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:16:47.307246 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:16:47.307249 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:16:47.307253 2016] [:error] [pid 4681] [client 127.0.0.1:40364] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:16:50.691509 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP Warning:  include(/var/www/danik/models/Station.php): failed to open stream: No such file or directory in /var/www/danik/controllers/StationController.php on line 2
+[Thu Oct 27 15:16:50.691526 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP Stack trace:
+[Thu Oct 27 15:16:50.691531 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:16:50.691535 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:16:50.691538 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP   3. include() /var/www/danik/libs/Router.php:45
+[Thu Oct 27 15:16:50.691551 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP Warning:  include(): Failed opening '/var/www/danik/models/Station.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/danik/controllers/StationController.php on line 2
+[Thu Oct 27 15:16:50.691554 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP Stack trace:
+[Thu Oct 27 15:16:50.691558 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:16:50.691561 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:16:50.691564 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP   3. include() /var/www/danik/libs/Router.php:45
+[Thu Oct 27 15:16:50.691579 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP Warning:  Missing argument 1 for StationController::actionUpdateCart() in /var/www/danik/controllers/StationController.php on line 12
+[Thu Oct 27 15:16:50.691582 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP Stack trace:
+[Thu Oct 27 15:16:50.691584 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:16:50.691587 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:16:50.691590 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:16:50.691594 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:16:50.691599 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP Fatal error:  Class 'Station' not found in /var/www/danik/controllers/StationController.php on line 14
+[Thu Oct 27 15:16:50.691601 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP Stack trace:
+[Thu Oct 27 15:16:50.691603 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:16:50.691607 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:16:50.691609 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:16:50.691613 2016] [:error] [pid 4682] [client 127.0.0.1:40366] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:17:18.268324 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP Warning:  include(/var/www/danik/models/Station.php): failed to open stream: No such file or directory in /var/www/danik/controllers/StationController.php on line 2
+[Thu Oct 27 15:17:18.268352 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP Stack trace:
+[Thu Oct 27 15:17:18.268366 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:18.268370 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:18.268373 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP   3. include() /var/www/danik/libs/Router.php:45
+[Thu Oct 27 15:17:18.268380 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP Warning:  include(): Failed opening '/var/www/danik/models/Station.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/danik/controllers/StationController.php on line 2
+[Thu Oct 27 15:17:18.268383 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP Stack trace:
+[Thu Oct 27 15:17:18.268386 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:18.268389 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:18.268392 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP   3. include() /var/www/danik/libs/Router.php:45
+[Thu Oct 27 15:17:18.268417 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP Warning:  Missing argument 1 for StationController::actionUpdateCart() in /var/www/danik/controllers/StationController.php on line 12
+[Thu Oct 27 15:17:18.268425 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP Stack trace:
+[Thu Oct 27 15:17:18.268427 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:18.268430 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:18.268433 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:18.268436 2016] [:error] [pid 4683] [client 127.0.0.1:40368] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:28.035916 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP Warning:  include(/var/www/danik/models/Station.php): failed to open stream: No such file or directory in /var/www/danik/controllers/StationController.php on line 2
+[Thu Oct 27 15:17:28.035935 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP Stack trace:
+[Thu Oct 27 15:17:28.035940 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:28.035945 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:28.035948 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP   3. include() /var/www/danik/libs/Router.php:45
+[Thu Oct 27 15:17:28.035955 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP Warning:  include(): Failed opening '/var/www/danik/models/Station.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/danik/controllers/StationController.php on line 2
+[Thu Oct 27 15:17:28.035957 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP Stack trace:
+[Thu Oct 27 15:17:28.035960 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:28.035964 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:28.035967 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP   3. include() /var/www/danik/libs/Router.php:45
+[Thu Oct 27 15:17:28.035984 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP Warning:  Missing argument 1 for StationController::actionUpdateCart() in /var/www/danik/controllers/StationController.php on line 12
+[Thu Oct 27 15:17:28.035987 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP Stack trace:
+[Thu Oct 27 15:17:28.035990 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:28.035993 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:28.035996 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:28.036000 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:28.036005 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP Fatal error:  Class 'Station' not found in /var/www/danik/controllers/StationController.php on line 15
+[Thu Oct 27 15:17:28.036007 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP Stack trace:
+[Thu Oct 27 15:17:28.036010 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:28.036013 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:28.036017 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:28.036020 2016] [:error] [pid 4684] [client 127.0.0.1:40370] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899410 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Warning:  Missing argument 1 for StationController::actionUpdateCart() in /var/www/danik/controllers/StationController.php on line 12
+[Thu Oct 27 15:17:47.899433 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Stack trace:
+[Thu Oct 27 15:17:47.899439 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:47.899443 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:47.899446 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899450 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899455 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Notice:  Undefined variable: data in /var/www/danik/controllers/StationController.php on line 16
+[Thu Oct 27 15:17:47.899457 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Stack trace:
+[Thu Oct 27 15:17:47.899459 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:47.899463 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:47.899465 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899469 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899477 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Notice:  Undefined variable: data in /var/www/danik/controllers/StationController.php on line 18
+[Thu Oct 27 15:17:47.899479 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Stack trace:
+[Thu Oct 27 15:17:47.899482 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:47.899485 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:47.899487 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899490 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899493 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Notice:  Trying to get property of non-object in /var/www/danik/controllers/StationController.php on line 18
+[Thu Oct 27 15:17:47.899495 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Stack trace:
+[Thu Oct 27 15:17:47.899498 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:47.899501 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:47.899503 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899506 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899509 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Notice:  Undefined variable: data in /var/www/danik/controllers/StationController.php on line 18
+[Thu Oct 27 15:17:47.899511 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Stack trace:
+[Thu Oct 27 15:17:47.899513 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:47.899516 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:47.899519 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899522 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899527 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Notice:  Trying to get property of non-object in /var/www/danik/controllers/StationController.php on line 18
+[Thu Oct 27 15:17:47.899529 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Stack trace:
+[Thu Oct 27 15:17:47.899531 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:47.899534 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:47.899537 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899540 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899543 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Notice:  Undefined variable: data in /var/www/danik/controllers/StationController.php on line 18
+[Thu Oct 27 15:17:47.899544 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Stack trace:
+[Thu Oct 27 15:17:47.899547 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:47.899550 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:47.899552 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899555 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899558 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Notice:  Trying to get property of non-object in /var/www/danik/controllers/StationController.php on line 18
+[Thu Oct 27 15:17:47.899559 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP Stack trace:
+[Thu Oct 27 15:17:47.899562 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:47.899565 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:47.899567 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:47.899570 2016] [:error] [pid 4717] [client 127.0.0.1:40372] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:54.075877 2016] [:error] [pid 4736] [client 127.0.0.1:40374] PHP Warning:  Missing argument 1 for StationController::actionUpdateCart() in /var/www/danik/controllers/StationController.php on line 12
+[Thu Oct 27 15:17:54.075894 2016] [:error] [pid 4736] [client 127.0.0.1:40374] PHP Stack trace:
+[Thu Oct 27 15:17:54.075899 2016] [:error] [pid 4736] [client 127.0.0.1:40374] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:17:54.075903 2016] [:error] [pid 4736] [client 127.0.0.1:40374] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:17:54.075907 2016] [:error] [pid 4736] [client 127.0.0.1:40374] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:17:54.075911 2016] [:error] [pid 4736] [client 127.0.0.1:40374] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:18:35.499131 2016] [:error] [pid 4680] [client 127.0.0.1:40376] PHP Warning:  Missing argument 1 for StationController::actionUpdateCart() in /var/www/danik/controllers/StationController.php on line 12
+[Thu Oct 27 15:18:35.499149 2016] [:error] [pid 4680] [client 127.0.0.1:40376] PHP Stack trace:
+[Thu Oct 27 15:18:35.499154 2016] [:error] [pid 4680] [client 127.0.0.1:40376] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:18:35.499158 2016] [:error] [pid 4680] [client 127.0.0.1:40376] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:18:35.499167 2016] [:error] [pid 4680] [client 127.0.0.1:40376] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:18:35.499171 2016] [:error] [pid 4680] [client 127.0.0.1:40376] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:18:35.499175 2016] [:error] [pid 4680] [client 127.0.0.1:40376] PHP Notice:  Undefined variable: data in /var/www/danik/controllers/StationController.php on line 14
+[Thu Oct 27 15:18:35.499177 2016] [:error] [pid 4680] [client 127.0.0.1:40376] PHP Stack trace:
+[Thu Oct 27 15:18:35.499180 2016] [:error] [pid 4680] [client 127.0.0.1:40376] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:18:35.499183 2016] [:error] [pid 4680] [client 127.0.0.1:40376] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:18:35.499185 2016] [:error] [pid 4680] [client 127.0.0.1:40376] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:18:35.499189 2016] [:error] [pid 4680] [client 127.0.0.1:40376] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:00.393655 2016] [:error] [pid 4681] [client 127.0.0.1:40380] PHP Warning:  call_user_func_array() expects parameter 2 to be array, boolean given in /var/www/danik/libs/Router.php on line 52
+[Thu Oct 27 15:20:00.393674 2016] [:error] [pid 4681] [client 127.0.0.1:40380] PHP Stack trace:
+[Thu Oct 27 15:20:00.393688 2016] [:error] [pid 4681] [client 127.0.0.1:40380] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:20:00.393693 2016] [:error] [pid 4681] [client 127.0.0.1:40380] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:20:00.393696 2016] [:error] [pid 4681] [client 127.0.0.1:40380] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.840817 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Warning:  Missing argument 1 for StationController::actionUpdateCart() in /var/www/danik/controllers/StationController.php on line 16
+[Thu Oct 27 15:20:58.840834 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Stack trace:
+[Thu Oct 27 15:20:58.840850 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:20:58.840854 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:20:58.840858 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.840862 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.840866 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Notice:  Undefined variable: data in /var/www/danik/controllers/StationController.php on line 18
+[Thu Oct 27 15:20:58.840868 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Stack trace:
+[Thu Oct 27 15:20:58.840871 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:20:58.840875 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:20:58.840887 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.840891 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.840898 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Notice:  Undefined variable: data in /var/www/danik/controllers/StationController.php on line 20
+[Thu Oct 27 15:20:58.840900 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Stack trace:
+[Thu Oct 27 15:20:58.840902 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:20:58.840906 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:20:58.840915 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.840918 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.840926 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Notice:  Undefined variable: data in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:20:58.840928 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Stack trace:
+[Thu Oct 27 15:20:58.840931 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:20:58.840934 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:20:58.840937 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.840949 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.840952 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Notice:  Trying to get property of non-object in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:20:58.840954 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Stack trace:
+[Thu Oct 27 15:20:58.840956 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:20:58.840959 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:20:58.840961 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.840964 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.840967 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Notice:  Undefined variable: data in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:20:58.840969 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Stack trace:
+[Thu Oct 27 15:20:58.840971 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:20:58.840973 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:20:58.840976 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.840979 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.840981 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Notice:  Trying to get property of non-object in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:20:58.840983 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Stack trace:
+[Thu Oct 27 15:20:58.840985 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:20:58.840988 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:20:58.840990 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.840993 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.840995 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Notice:  Undefined variable: data in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:20:58.840997 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Stack trace:
+[Thu Oct 27 15:20:58.840999 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:20:58.841004 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:20:58.841006 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.841009 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.841011 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Notice:  Trying to get property of non-object in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:20:58.841013 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP Stack trace:
+[Thu Oct 27 15:20:58.841015 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:20:58.841018 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:20:58.841020 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:20:58.841023 2016] [:error] [pid 4682] [client 127.0.0.1:40432] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:21:06.187459 2016] [:error] [pid 4683] [client 127.0.0.1:40438] PHP Warning:  Missing argument 1 for StationController::actionUpdateCart() in /var/www/danik/controllers/StationController.php on line 16
+[Thu Oct 27 15:21:06.187475 2016] [:error] [pid 4683] [client 127.0.0.1:40438] PHP Stack trace:
+[Thu Oct 27 15:21:06.187479 2016] [:error] [pid 4683] [client 127.0.0.1:40438] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:21:06.187483 2016] [:error] [pid 4683] [client 127.0.0.1:40438] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:21:06.187486 2016] [:error] [pid 4683] [client 127.0.0.1:40438] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:21:06.187490 2016] [:error] [pid 4683] [client 127.0.0.1:40438] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:21:06.187494 2016] [:error] [pid 4683] [client 127.0.0.1:40438] PHP Notice:  Undefined variable: data in /var/www/danik/controllers/StationController.php on line 18
+[Thu Oct 27 15:21:06.187495 2016] [:error] [pid 4683] [client 127.0.0.1:40438] PHP Stack trace:
+[Thu Oct 27 15:21:06.187498 2016] [:error] [pid 4683] [client 127.0.0.1:40438] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:21:06.187501 2016] [:error] [pid 4683] [client 127.0.0.1:40438] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:21:06.187504 2016] [:error] [pid 4683] [client 127.0.0.1:40438] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:21:06.187507 2016] [:error] [pid 4683] [client 127.0.0.1:40438] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:21:10.584819 2016] [:error] [pid 4684] [client 127.0.0.1:40440] PHP Warning:  call_user_func_array() expects parameter 2 to be array, boolean given in /var/www/danik/libs/Router.php on line 52
+[Thu Oct 27 15:21:10.584841 2016] [:error] [pid 4684] [client 127.0.0.1:40440] PHP Stack trace:
+[Thu Oct 27 15:21:10.584856 2016] [:error] [pid 4684] [client 127.0.0.1:40440] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:21:10.584860 2016] [:error] [pid 4684] [client 127.0.0.1:40440] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:21:10.584863 2016] [:error] [pid 4684] [client 127.0.0.1:40440] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:52
+[Thu Oct 27 15:27:47.934484 2016] [:error] [pid 4683] [client 127.0.0.1:40586] PHP Warning:  call_user_func_array() expects parameter 2 to be array, object given in /var/www/danik/libs/Router.php on line 53
+[Thu Oct 27 15:27:47.934502 2016] [:error] [pid 4683] [client 127.0.0.1:40586] PHP Stack trace:
+[Thu Oct 27 15:27:47.934523 2016] [:error] [pid 4683] [client 127.0.0.1:40586] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:27:47.934528 2016] [:error] [pid 4683] [client 127.0.0.1:40586] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:27:47.934531 2016] [:error] [pid 4683] [client 127.0.0.1:40586] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:28:00.556398 2016] [:error] [pid 4717] [client 127.0.0.1:40588] PHP Warning:  call_user_func_array() expects parameter 2 to be array, object given in /var/www/danik/libs/Router.php on line 54
+[Thu Oct 27 15:28:00.556421 2016] [:error] [pid 4717] [client 127.0.0.1:40588] PHP Stack trace:
+[Thu Oct 27 15:28:00.556429 2016] [:error] [pid 4717] [client 127.0.0.1:40588] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:28:00.556435 2016] [:error] [pid 4717] [client 127.0.0.1:40588] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:28:00.556441 2016] [:error] [pid 4717] [client 127.0.0.1:40588] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:54
+[Thu Oct 27 15:28:57.194354 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP Warning:  Illegal string offset 'id' in /var/www/danik/controllers/StationController.php on line 19
+[Thu Oct 27 15:28:57.194370 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP Stack trace:
+[Thu Oct 27 15:28:57.194374 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:28:57.194379 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:28:57.194382 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:28:57.194386 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:28:57.194395 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP Warning:  Illegal string offset 'balance' in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:28:57.194397 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP Stack trace:
+[Thu Oct 27 15:28:57.194400 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:28:57.194404 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:28:57.194407 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:28:57.194410 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:28:57.194413 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP Warning:  Illegal string offset 'admin' in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:28:57.194415 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP Stack trace:
+[Thu Oct 27 15:28:57.194418 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:28:57.194421 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:28:57.194423 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:28:57.194426 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:28:57.194429 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP Warning:  Illegal string offset 'plug' in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:28:57.194431 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP Stack trace:
+[Thu Oct 27 15:28:57.194434 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:28:57.194437 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:28:57.194445 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:28:57.194448 2016] [:error] [pid 4736] [client 127.0.0.1:40592] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:51.378083 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP Notice:  Undefined property: stdClass::$id in /var/www/danik/controllers/StationController.php on line 19
+[Thu Oct 27 15:29:51.378099 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP Stack trace:
+[Thu Oct 27 15:29:51.378104 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:29:51.378108 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:29:51.378111 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:51.378115 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:51.378125 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP Notice:  Undefined property: stdClass::$balance in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:29:51.378128 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP Stack trace:
+[Thu Oct 27 15:29:51.378131 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:29:51.378134 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:29:51.378137 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:51.378141 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:51.378144 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP Notice:  Undefined property: stdClass::$admin in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:29:51.378146 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP Stack trace:
+[Thu Oct 27 15:29:51.378149 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:29:51.378152 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:29:51.378155 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:51.378159 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:51.378162 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP Notice:  Undefined property: stdClass::$plug in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:29:51.378164 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP Stack trace:
+[Thu Oct 27 15:29:51.378166 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:29:51.378169 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:29:51.378172 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:51.378176 2016] [:error] [pid 4682] [client 127.0.0.1:40598] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:52.800163 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP Notice:  Undefined property: stdClass::$id in /var/www/danik/controllers/StationController.php on line 19
+[Thu Oct 27 15:29:52.800182 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP Stack trace:
+[Thu Oct 27 15:29:52.800193 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:29:52.800198 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:29:52.800201 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:52.800205 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:52.800225 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP Notice:  Undefined property: stdClass::$balance in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:29:52.800227 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP Stack trace:
+[Thu Oct 27 15:29:52.800230 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:29:52.800233 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:29:52.800245 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:52.800248 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:52.800252 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP Notice:  Undefined property: stdClass::$admin in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:29:52.800253 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP Stack trace:
+[Thu Oct 27 15:29:52.800256 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:29:52.800258 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:29:52.800261 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:52.800264 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:52.800267 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP Notice:  Undefined property: stdClass::$plug in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:29:52.800268 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP Stack trace:
+[Thu Oct 27 15:29:52.800271 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:29:52.800273 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:29:52.800276 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:29:52.800279 2016] [:error] [pid 4684] [client 127.0.0.1:40600] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:30:34.858382 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP Notice:  Undefined property: stdClass::$id in /var/www/danik/controllers/StationController.php on line 19
+[Thu Oct 27 15:30:34.858398 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP Stack trace:
+[Thu Oct 27 15:30:34.858403 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:30:34.858407 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:30:34.858411 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:30:34.858414 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:30:34.858424 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP Notice:  Undefined property: stdClass::$balance in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:30:34.858432 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP Stack trace:
+[Thu Oct 27 15:30:34.858435 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:30:34.858438 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:30:34.858441 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:30:34.858444 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:30:34.858448 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP Notice:  Undefined property: stdClass::$admin in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:30:34.858450 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP Stack trace:
+[Thu Oct 27 15:30:34.858452 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:30:34.858455 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:30:34.858458 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:30:34.858461 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:30:34.858464 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP Notice:  Undefined property: stdClass::$plug in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:30:34.858465 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP Stack trace:
+[Thu Oct 27 15:30:34.858468 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:30:34.858471 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:30:34.858473 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:30:34.858476 2016] [:error] [pid 4683] [client 127.0.0.1:40602] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:10.992244 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP Notice:  Undefined property: stdClass::$id in /var/www/danik/controllers/StationController.php on line 19
+[Thu Oct 27 15:34:10.992272 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP Stack trace:
+[Thu Oct 27 15:34:10.992282 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:10.992289 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:10.992294 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:10.992300 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:10.992316 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP Notice:  Undefined property: stdClass::$balance in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:34:10.992320 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP Stack trace:
+[Thu Oct 27 15:34:10.992325 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:10.992330 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:10.992336 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:10.992342 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:10.992357 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP Notice:  Undefined property: stdClass::$admin in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:34:10.992360 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP Stack trace:
+[Thu Oct 27 15:34:10.992365 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:10.992370 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:10.992375 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:10.992380 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:10.992385 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP Notice:  Undefined property: stdClass::$plug in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:34:10.992388 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP Stack trace:
+[Thu Oct 27 15:34:10.992392 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:10.992397 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:10.992402 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:10.992407 2016] [:error] [pid 4717] [client 127.0.0.1:40610] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:24.615491 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP Notice:  Undefined property: stdClass::$id in /var/www/danik/controllers/StationController.php on line 20
+[Thu Oct 27 15:34:24.615508 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP Stack trace:
+[Thu Oct 27 15:34:24.615513 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:24.615517 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:24.615520 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:24.615524 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:24.615534 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP Notice:  Undefined property: stdClass::$balance in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:34:24.615536 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP Stack trace:
+[Thu Oct 27 15:34:24.615539 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:24.615542 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:24.615545 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:24.615549 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:24.615552 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP Notice:  Undefined property: stdClass::$admin in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:34:24.615554 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP Stack trace:
+[Thu Oct 27 15:34:24.615556 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:24.615559 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:24.615562 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:24.615572 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:24.615575 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP Notice:  Undefined property: stdClass::$plug in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:34:24.615577 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP Stack trace:
+[Thu Oct 27 15:34:24.615580 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:24.615583 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:24.615586 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:24.615589 2016] [:error] [pid 4736] [client 127.0.0.1:40612] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.544900 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP Notice:  Undefined property: stdClass::$id in /var/www/danik/controllers/StationController.php on line 20
+[Thu Oct 27 15:34:38.544926 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP Stack trace:
+[Thu Oct 27 15:34:38.544930 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:38.544935 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:38.544938 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.544942 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.544952 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP Notice:  Undefined property: stdClass::$balance in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:34:38.544954 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP Stack trace:
+[Thu Oct 27 15:34:38.544956 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:38.544960 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:38.544963 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.544966 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.544969 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP Notice:  Undefined property: stdClass::$admin in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:34:38.544971 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP Stack trace:
+[Thu Oct 27 15:34:38.544974 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:38.544977 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:38.544979 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.544983 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.544986 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP Notice:  Undefined property: stdClass::$plug in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:34:38.544987 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP Stack trace:
+[Thu Oct 27 15:34:38.544990 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:38.545000 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:38.545003 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.545006 2016] [:error] [pid 4680] [client 127.0.0.1:40614] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.854467 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP Notice:  Undefined property: stdClass::$id in /var/www/danik/controllers/StationController.php on line 20
+[Thu Oct 27 15:34:38.854489 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP Stack trace:
+[Thu Oct 27 15:34:38.854493 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:38.854498 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:38.854501 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.854505 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.854515 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP Notice:  Undefined property: stdClass::$balance in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:34:38.854517 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP Stack trace:
+[Thu Oct 27 15:34:38.854520 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:38.854523 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:38.854526 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.854530 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.854542 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP Notice:  Undefined property: stdClass::$admin in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:34:38.854544 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP Stack trace:
+[Thu Oct 27 15:34:38.854547 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:38.854549 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:38.854552 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.854555 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.854558 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP Notice:  Undefined property: stdClass::$plug in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:34:38.854560 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP Stack trace:
+[Thu Oct 27 15:34:38.854562 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:34:38.854565 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:34:38.854567 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:34:38.854570 2016] [:error] [pid 4681] [client 127.0.0.1:40616] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:07.242929 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP Notice:  Undefined property: stdClass::$id in /var/www/danik/controllers/StationController.php on line 19
+[Thu Oct 27 15:35:07.242946 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP Stack trace:
+[Thu Oct 27 15:35:07.242956 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:35:07.242960 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:35:07.242964 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:07.242967 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:07.242979 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP Notice:  Undefined property: stdClass::$balance in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:35:07.242981 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP Stack trace:
+[Thu Oct 27 15:35:07.242984 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:35:07.242987 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:35:07.242990 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:07.242993 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:07.242997 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP Notice:  Undefined property: stdClass::$admin in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:35:07.242998 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP Stack trace:
+[Thu Oct 27 15:35:07.243001 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:35:07.243003 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:35:07.243006 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:07.243009 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:07.243012 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP Notice:  Undefined property: stdClass::$plug in /var/www/danik/controllers/StationController.php on line 22
+[Thu Oct 27 15:35:07.243013 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP Stack trace:
+[Thu Oct 27 15:35:07.243016 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:35:07.243018 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:35:07.243021 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:07.243024 2016] [:error] [pid 4682] [client 127.0.0.1:40618] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:31.709007 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP Notice:  Undefined property: stdClass::$id in /var/www/danik/controllers/StationController.php on line 19
+[Thu Oct 27 15:35:31.709023 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP Stack trace:
+[Thu Oct 27 15:35:31.709027 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:35:31.709032 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:35:31.709035 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:31.709039 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:31.709048 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP Notice:  Undefined property: stdClass::$balance in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:35:31.709056 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP Stack trace:
+[Thu Oct 27 15:35:31.709060 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:35:31.709063 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:35:31.709066 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:31.709069 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:31.709073 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP Notice:  Undefined property: stdClass::$admin in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:35:31.709074 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP Stack trace:
+[Thu Oct 27 15:35:31.709077 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:35:31.709080 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:35:31.709083 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:31.709086 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:31.709088 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP Notice:  Undefined property: stdClass::$plug in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:35:31.709090 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP Stack trace:
+[Thu Oct 27 15:35:31.709092 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:35:31.709095 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:35:31.709098 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:31.709101 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:31.709109 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP Notice:  Array to string conversion in /var/www/danik/controllers/StationController.php on line 24
+[Thu Oct 27 15:35:31.709111 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP Stack trace:
+[Thu Oct 27 15:35:31.709113 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:35:31.709116 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:35:31.709119 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:31.709122 2016] [:error] [pid 4684] [client 127.0.0.1:40636] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:47.496714 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP Notice:  Undefined property: stdClass::$id in /var/www/danik/controllers/StationController.php on line 19
+[Thu Oct 27 15:35:47.496729 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP Stack trace:
+[Thu Oct 27 15:35:47.496734 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:35:47.496738 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:35:47.496741 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:47.496745 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:47.496760 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP Notice:  Undefined property: stdClass::$balance in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:35:47.496762 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP Stack trace:
+[Thu Oct 27 15:35:47.496765 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:35:47.496768 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:35:47.496770 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:47.496773 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:47.496776 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP Notice:  Undefined property: stdClass::$admin in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:35:47.496778 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP Stack trace:
+[Thu Oct 27 15:35:47.496781 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:35:47.496784 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:35:47.496786 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:47.496789 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:47.496792 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP Notice:  Undefined property: stdClass::$plug in /var/www/danik/controllers/StationController.php on line 21
+[Thu Oct 27 15:35:47.496793 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP Stack trace:
+[Thu Oct 27 15:35:47.496796 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   1. {main}() /var/www/danik/web/index.php:0
+[Thu Oct 27 15:35:47.496799 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   2. Router->run() /var/www/danik/web/index.php:12
+[Thu Oct 27 15:35:47.496801 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   3. call_user_func_array() /var/www/danik/libs/Router.php:53
+[Thu Oct 27 15:35:47.496804 2016] [:error] [pid 4683] [client 127.0.0.1:40638] PHP   4. StationController::actionUpdateCart() /var/www/danik/libs/Router.php:53
