@@ -15,6 +15,7 @@ class Station {
     public function __construct($id)
     {
         $this->station = new \Entity\Station();
+        $this->station->setId($id);
     }
 
     static $array = [

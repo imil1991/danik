@@ -8,7 +8,6 @@
 
 namespace demon;
 require_once 'WebSocketWorker.php';
-require_once '../models/Station.php';
 use demon\WebSocketWorker;
 use Model\Station;
 
@@ -84,7 +83,7 @@ class WebSocketHandler extends WebSocketWorker{
         switch ($decodedData->model){
             case 'station':
                 {
-                    $obj = new Station();
+                    $obj = new Station($data->id);
                     $response = $obj->$action($data);
                 }break;
         }
