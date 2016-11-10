@@ -16,5 +16,10 @@ return [
         'host' => '5.101.105.227',
         'login' => 'root',
         'password' => '[e1995b&&&a1996r]'
+    ],
+    'socket' =>[
+        'host' => '0.0.0.0',
+        'port' => 8000,
+        'workers' => 1,
     ]
 ];

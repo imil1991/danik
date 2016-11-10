@@ -1,12 +1,10 @@
 #!/usr/bin/env php
 <?php
-error_reporting(E_ERROR);
+
+error_reporting(E_ALL);
+$config = include 'config/web.php';
+include 'libs/Log.php';
 require_once('WebSocketServer.php');
 use demon\WebSocketServer;
-$config = array(
-    'host' => '0.0.0.0',
-    'port' => 8000,
-    'workers' => 1,
-);
-$WebSocketServer = new WebsocketServer($config);
+$WebSocketServer = new WebsocketServer($config['socket']);
 $WebSocketServer->start();

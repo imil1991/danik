@@ -7,7 +7,7 @@
  */
 
 namespace demon;
-
+require_once 'models/Station.php';
 abstract class WebSocketWorker
 {
 
@@ -20,12 +20,10 @@ abstract class WebSocketWorker
 
     /**
      * @param $server
-     * @param $master
      */
-    public function __construct($server, $master)
+    public function __construct($server)
     {
         $this->server = $server;
-        $this->master = $master;
         $this->pid = posix_getpid();
     }
 
@@ -35,7 +33,8 @@ abstract class WebSocketWorker
             # подготавливаем массив всех сокетов, которые нужно обработать
             $read = $this->clients;
             $read[] = $this->server;
-            $read[] = $this->master;
+            if(!empty($this->master))
+                $read[] = $this->master;
 
             $write = array();
             if ($this->handshakes) {
@@ -104,8 +103,12 @@ abstract class WebSocketWorker
             if($decodedData->model == 'station'){
                 if($decodedData->action == 'set_id'){
                     $key = $decodedData->data->id;
+                    $log = new \Log();
                     if($key == 'master'){
+                        $log->add(__CLASS__,'Подключен сервер');
                         $this->master = $client;
+                    } else {
+                        $log->add(__CLASS__,'Подключена станция №' . $key);
                     }
                 }
             }

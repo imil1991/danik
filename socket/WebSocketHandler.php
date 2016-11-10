@@ -83,7 +83,7 @@ class WebSocketHandler extends WebSocketWorker{
         switch ($decodedData->model){
             case 'station':
                 {
-                    $obj = new Station($data->id);
+                    $obj = new Station($data->station);
                     $response = $obj->$action($data);
                 }break;
         }

@@ -1,7 +1,10 @@
 <?php
 namespace Model;
 use Entity\Plug;
-
+require_once 'Entity/Card.php';
+require_once 'Entity/Plug.php';
+require_once 'Entity/Station.php';
+require_once 'Entity/User.php';
 /**
  * Created by PhpStorm.
  * User: bona
@@ -14,35 +17,12 @@ class Station {
 
     public function __construct($id)
     {
-        $this->station = new \Entity\Station();
+        $this->station = new \Entity\Station;
         $this->station->setId($id);
     }
 
-    static $array = [
-      1 => [
-          'id' => '0x030x220xBB0xBB',
-          'balance' => '',
-          'admin' => '',
-      ],
-      2 => [
-          'id' => '0x630x660xBE0xBB',
-          'balance' => '',
-          'admin' => '',
-      ],
-      3 => [
-          'id' => '0x840x520x1A0x2B',
-          'balance' => '',
-          'admin' => '1',
-      ],
-      4 => [
-          'id' => '0x630x630xA90xBB',
-          'balance' => '',
-          'admin' => '1',
-      ],
-    ];
-
     /** Меняет статус розетки пример:
-     *  {"model":"station","action":"station_control","data":{"station":"000001", "plug": 1, "status": true }}
+     *  {"model":"station","action":"station_control","data":{"station":"1", "plug": 1, "status": true }}
      * @param $data
      * @return array
      */
@@ -66,7 +46,7 @@ class Station {
     public static function CardFound($data)
     {
         $parse = unpack('C*',$data->id);
-        $cardInfo = self::$array[1];
+        $cardInfo = ['balance' => 100, 'admin' => 1 ];
         $pack = pack('C*', $cardInfo['balance']);
         $response['message'] = 'CARD'.$data->id. $pack .$cardInfo['admin'].'\r\n';
 
@@ -107,7 +87,10 @@ class Station {
         );
 
         $log = new \Log();
-        $log->add(__CLASS__,'Потреблённая мощность - ' . $data->power .' кВт*час');
+        $message = $this->station->getMessageId();
+        $message .= 'Окончание потребления тока'.PHP_EOL;
+        $message .= 'Потреблённая мощность - ' . $data->power . ' кВт*час';
+        $log->add(get_called_class(), $message);
     }
 
     public function OverCurrent($data)

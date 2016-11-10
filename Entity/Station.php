@@ -92,4 +92,12 @@ class Station
 
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getMessageId()
+    {
+        return 'Станция №'.$this->id.PHP_EOL;
+    }
 }
