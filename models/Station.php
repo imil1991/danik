@@ -64,12 +64,12 @@ class Station {
             (new Plug)
                 ->setPlugStatus($data->id, Plug::STATUS_BUSY)
         );
-        $newBalance = $this->station->getCard()->getUser()->getBalance() - 1;
-        $this->station->getCard()->getUser()->setBalance($newBalance);
-        $code = $this->station->getCard()->getCode();
-        $isAdmin = $this->station->getCard()->getUser()->getIsAdmin();
+        $card = $this->station->getCard();
+        $user = $card->getUser();
+        $newBalance = $user->getBalance() - 1;
+        $user->setBalance($newBalance);
         $response = [
-            'message' => self::prepareMessage('EDIT'.$code.$newBalance.$isAdmin),
+            'message' => self::prepareMessage('EDIT'.$card->getCode().$newBalance.$user->getIsAdmin()),
             'client' => 'all'
         ];
 
