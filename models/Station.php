@@ -85,74 +85,60 @@ class Station {
             (new Plug)
                 ->setPlugStatus($data->id, Plug::STATUS_OPEN)
         );
-
-        $log = new \Log();
-        $message = $this->station->getMessageId();
-        $message .= 'Окончание потребления тока'.PHP_EOL;
-        $message .= 'Потреблённая мощность - ' . $data->power . ' кВт*час';
-        $log->add(get_called_class(), $message);
-    }
+        $this->log('Окончание потребления тока'.PHP_EOL
+            .'Потреблённая мощность - ' . $data->power . ' кВт*час');
+     }
 
     public function OverCurrent($data)
     {
-        $log = new \Log();
-        $log->add(__CLASS__,'Превышение максимально допустимого тока по розетке #' . $data->id);
+        $this->log('Превышение максимально допустимого тока по розетке #' . $data->id);
     }
 
 
     public function OpenCase($data)
     {
-        $log = new \Log();
-        $log->add(__CLASS__,'Обнаружено вскрытие станции #' . $data->id);
+        $this->log('Обнаружено вскрытие станции #' . $data->id);
     }
 
     public function Waiting($data)
     {
-        $log = new \Log();
-        $log->add(__CLASS__,'Переход станции в режим ожидания потребления тока (9 вольт на пилоте) по розетке #' . $data->id);
+        $this->log('Переход станции в режим ожидания потребления тока (9 вольт на пилоте) по розетке #'. $data->id);
     }
 
     public function Fault($data)
     {
-        $log = new \Log();
-        $log->add(__CLASS__,'Обнаружение утечки по розетке #' . $data->id);
+        $this->log('Обнаружение утечки по розетке #' . $data->id);
     }
 
 
     public function ErrorLock($data)
     {
-        $log = new \Log();
-        $log->add(__CLASS__,'Обнаружение ошибки закрытия замка по розетке с пилотом #' . $data->id);
+        $this->log('Обнаружение ошибки закрытия замка по розетке с пилотом #' . $data->id);
     }
 
     public function ErrorPp($data)
     {
-        $log = new \Log();
-        $log->add(__CLASS__,'Обнаружение ошибки кодирующего резистора по розетке с пилотом #' . $data->id);
+        $this->log('Обнаружение ошибки кодирующего резистора по розетке с пилотом #' . $data->id);
     }
 
     public function Block($data)
     {
-        $log = new \Log();
-        $log->add(__CLASS__,'Успешная обработка комманды о блокировке розетки с пилотом #' . $data->id);
+        $this->log('Успешная обработка комманды о блокировке розетки с пилотом #' . $data->id);
     }
 
     public function Unblock($data)
     {
-        $log = new \Log();
-        $log->add(__CLASS__,'Успешноая обработка комманды об окончании блокировке розетки с пилотом #' . $data->id);
+        $this->log('Успешноая обработка комманды об окончании блокировке розетки с пилотом #' . $data->id);
     }
 
     public function Battery()
     {
-        $log = new \Log();
-        $log->add(__CLASS__,'Переход на батарейное питание');
+        $this->log('Переход на батарейное питание');
     }
 
     public function Drop()
     {
-        $log = new \Log();
-        $log->add(__CLASS__,'Обрыв питающих фаз');
+        $this->log('Обрыв питающих фаз');
     }
 
     /** Пакет на остановку заряда:
@@ -177,17 +163,24 @@ class Station {
      */
     public static function updateCart($data)
     {
-        $series = self::$array[$data->id];
         $response = [
-            'message' => self::prepareMessage('EDIT'.$series.$data->balance.$data->admin)
+            'message' => self::prepareMessage('EDIT:НОМЕР КАРТЫ:КРЕДИТ:АДМИН')
         ];
 
         return $response;
     }
 
-    public static function prepareMessage($message)
+    private static function prepareMessage($message)
     {
         return $message.'/r/n';
+    }
+
+    private function log($mess){
+        $log = new \Log();
+        $message = $this->station->getMessageId();
+        $message .= $mess;
+        $log->add(__CLASS__, $message);
+
     }
 
 }

@@ -59,8 +59,8 @@ abstract class WebSocketWorker
             }
 
             if (in_array($this->master, $read)) {  # пришли данные от мастера
-                $data = fread($this->master, 1000);
-                $this->onSend($data); # вызываем пользовательский сценарий
+                $data = fread($this->master, 256);
+                $this->sendToClients($data); # вызываем пользовательский сценарий
                 # удаляем мастера из массива, чтобы не обработать его в этом цикле ещё раз
                 unset($read[array_search($this->master, $read)]);
             }
@@ -70,8 +70,8 @@ abstract class WebSocketWorker
 
                     if (isset($this->handshakes[intval($client)])) {
                         if ($this->handshakes[intval($client)]) { # если уже было получено рукопожатие от клиента
-                            $data = fread($client, 1000);
-                            $this->onMessage($client, $data); # вызываем пользовательский сценарий
+                            $data = fread($client, 256);
+                            $this->sendToServer($client, $data); # вызываем пользовательский сценарий
                             unset($read[$client]);
                             continue; # то до отправки ответа от сервера читать здесь пока ничего не надо
                         }
@@ -98,7 +98,7 @@ abstract class WebSocketWorker
 
         if (!$key) {
             # считываем загаловки из соединения
-            $data = fread($client, 10000);
+            $data = fread($client, 256);
             $decodedData = json_decode($data);
             if($decodedData->model == 'station'){
                 if($decodedData->action == 'set_id'){
@@ -106,6 +106,7 @@ abstract class WebSocketWorker
                     $log = new \Log();
                     if($key == 'master'){
                         $log->add(__CLASS__,'Подключен сервер');
+                        @fwrite($client, 'OK');
                         $this->master = $client;
                     } else {
                         $log->add(__CLASS__,'Подключена станция №' . $key);
@@ -131,14 +132,8 @@ abstract class WebSocketWorker
         return $decodedData;
     }
 
-    abstract protected function onOpen($client, $info);
+    abstract protected function sendToServer($client, $data);
 
-    abstract protected function onClose($client);
-
-    abstract protected function onMessage($client, $data);
-
-    abstract protected function onSend($data);
-
-    abstract protected function send($data);
+    abstract protected function sendToClients($data);
 
 }
