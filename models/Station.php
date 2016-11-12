@@ -39,7 +39,7 @@ class Station {
 
 
     /** При обнаружении карты клиента
-     * {"model":"station","action":"card_found","data":{"id":"0x630x630xA90xBB"}}
+     * {"model":"station","action":"card_found","data":{"id":"0000001"}}
      * @param $data
      * @return mixed
      */
