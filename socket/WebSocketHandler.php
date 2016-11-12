@@ -9,31 +9,17 @@
 namespace demon;
 require_once 'WebSocketWorker.php';
 use demon\WebSocketWorker;
+use Model\Plug;
 use Model\Station;
 
 class WebSocketHandler extends WebSocketWorker{
 
-    /** вызывается при соединении с новым клиентом
-     * @param $client
-     * @param $info
-     */
-    protected function onOpen($client, $info)
-    {
-    }
-
-    /** вызывается при закрытии соединения клиентом
-     * @param $client
-     */
-    protected function onClose($client)
-    {
-
-    }
 
     /** вызывается при получении сообщения от клиента
      * @param $client
      * @param $data
      */
-    protected function onMessage($client, $data)
+    protected function sendToServer($client, $data)
     {
         $decodedData = json_decode($data);
         $action = preg_replace_callback("/(?:^|_)([a-z])/", function($matches) {
@@ -46,32 +32,23 @@ class WebSocketHandler extends WebSocketWorker{
             case 'station':
             {
                 $obj = new Station(intval($client));
-                $response = $obj->$action($data);
             }break;
+            case 'plug':
+            {
+                $obj = new Plug(intval($client));
+            }break;
+            default:
+                $obj = new Station(intval($client));
+                break;
         }
+        $response = $obj->$action($data);
 
         if(!empty($response['message'])){
-            @fwrite($client, $response['message']);
+            @fwrite(current($this->master), $response['message']);
         }
     }
 
-    /** вызывается при получении сообщения от мастера
-     * @param $data
-     */
-    protected function onSend($data)
-    {
-        $this->sendHelper($data);
-    }
-
-    /** отправляем сообщение на мастер, чтобы он разослал его на все воркеры
-     * @param $message
-     */
-    protected function send($message)
-    {
-        @fwrite($this->master, $message);
-    }
-
-    private function sendHelper($data)
+    protected function sendToClients($data)
     {
         $decodedData = json_decode($data);
         $action = preg_replace_callback("/(?:^|_)([a-z])/", function($matches) {
