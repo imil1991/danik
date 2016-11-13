@@ -18,16 +18,19 @@ class WebSocketHandler extends WebSocketWorker{
     /** вызывается при получении сообщения от клиента
      * @param $client
      * @param $data
+     * @return bool
      */
     protected function sendToServer($client, $data)
     {
         $decodedData = json_decode($data);
+        if(!is_object($decodedData)){
+            return false;
+        }
         $action = preg_replace_callback("/(?:^|_)([a-z])/", function($matches) {
             return strtoupper($matches[1]);
         }, $decodedData->action);
         $data = $decodedData->data;
 
-        $response = [];
         switch ($decodedData->model){
             case 'station':
             {
@@ -42,15 +45,21 @@ class WebSocketHandler extends WebSocketWorker{
                 break;
         }
         $response = $obj->$action($data);
-
         if(!empty($response['message'])){
-            @fwrite(current($this->master), $response['message']);
+            @fwrite($this->master, $response['message']);
         }
     }
 
+    /**
+     * @param $data
+     * @return bool
+     */
     protected function sendToClients($data)
     {
         $decodedData = json_decode($data);
+        if(!is_object($decodedData)){
+            return false;
+        }
         $action = preg_replace_callback("/(?:^|_)([a-z])/", function($matches) {
             return strtoupper($matches[1]);
         }, $decodedData->action);

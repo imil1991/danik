@@ -8,6 +8,7 @@
 
 namespace demon;
 require_once 'models/Station.php';
+require_once 'models/Plug.php';
 abstract class WebSocketWorker
 {
 
@@ -60,6 +61,9 @@ abstract class WebSocketWorker
 
             if (in_array($this->master, $read)) {  # пришли данные от мастера
                 $data = fread($this->master, 256);
+                if($data == NULL){
+                    continue;
+                }
                 $this->sendToClients($data); # вызываем пользовательский сценарий
                 # удаляем мастера из массива, чтобы не обработать его в этом цикле ещё раз
                 unset($read[array_search($this->master, $read)]);
@@ -71,9 +75,12 @@ abstract class WebSocketWorker
                     if (isset($this->handshakes[intval($client)])) {
                         if ($this->handshakes[intval($client)]) { # если уже было получено рукопожатие от клиента
                             $data = fread($client, 256);
+                            if($data == NULL){
+                                continue;
+                            }
                             $this->sendToServer($client, $data); # вызываем пользовательский сценарий
                             unset($read[$client]);
-                            continue; # то до отправки ответа от сервера читать здесь пока ничего не надо
+                            continue;
                         }
 
                         if (!$this->handshake($client)) {
@@ -106,7 +113,7 @@ abstract class WebSocketWorker
                     $log = new \Log();
                     if($key == 'master'){
                         $log->add(__CLASS__,'Подключен сервер');
-                        @fwrite($client, 'OK');
+                        fwrite($client, 1);
                         $this->master = $client;
                     } else {
                         $log->add(__CLASS__,'Подключена станция №' . $key);

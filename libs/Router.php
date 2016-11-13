@@ -31,7 +31,7 @@ class Router {
     function run(){
         $uri = $this->getURI();
         foreach($this->routes as $pattern => $route){
-            if(preg_match("~$pattern~", $uri)){
+            if(preg_match("~$route~", $uri)){
                 $internalRoute = $route;
                 $segments = explode('/', $internalRoute);
                 $controller = ucfirst(array_shift($segments)).'Controller';

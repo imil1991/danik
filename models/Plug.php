@@ -12,4 +12,14 @@ namespace Model;
 class Plug
 {
 
+    /**
+     * {"model":"plug","action":"unblock","data":{"id":1}}
+     * @param $data
+     * @return array
+     */
+    public function unblock($data)
+    {
+        return ['message' => '{"status":"ok", "message":"plug #'.$data->id.' is unblocked"}'];
+    }
+
 }
