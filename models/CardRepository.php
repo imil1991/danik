@@ -11,6 +11,7 @@ namespace Model;
 class CardRepository
 {
 
+
     private $db, $collection;
 
     /**
@@ -18,15 +19,49 @@ class CardRepository
      */
     public function __construct()
     {
-        $this->db  = new \MongoDB\Driver\Manager("mongodb://5.101.105.227:27017");
+        
+        $m  = new \MongoClient("mongodb://5.101.105.227:27017");
+        $this->db  = $m->{'eline-dev'};
+        $this->collection = $this->db->{'cards'};
     }
 
 
+    /**
+     * @param $id
+     * @return Station
+     */
     public function findById($id)
     {
-        $query = new MongoDB\Driver\Query(['id' => $id]);
-        $result = $this->db->executeQuery("eline-dev.cards", $query)->toArray();
-        return $result;
+        return $this->collection->findOne(['id' => $id]);
+    }
+
+    /**
+     * @return array
+     */
+    public function findAll()
+    {
+        $cards = $this->collection->find();
+        $i=1;
+        foreach($cards as $card){
+            print_r($card);
+            $this->update(['id' => $card['id']],['id' => $i++]);
+        }
+        return $cards;
+    }
+
+    /**
+     * @param array $filter
+     * @param array $data
+     * @return $this
+     */
+    public function update(array $filter, array $data)
+    {
+        try {
+            $this->collection->update($filter, ['$set' => $data]);
+        } catch (\MongoCursorException $e){
+            echo $e->getMessage();
+        }
+        return $this;
     }
 
 

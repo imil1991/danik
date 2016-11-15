@@ -1,5 +1,5 @@
 <?php
-include '../models/StationRepository.php';
+include_once '../models/Station.php';
 /**
  * Created by PhpStorm.
  * User: bona
@@ -10,16 +10,16 @@ class StationController
 {
 
     /**
-     * @param $data {"model":"station","action":"update_cart","data":{"id":"123", "balance": 20, "is_admin": 1}}
+     * @param string $data {"model":"station","action":"update_cart","data":{"id":"123", "balance": 20, "is_admin": 1}}
      * @return array
      */
-    public function actionUpdateCart()
+    public static function actionUpdateCart($data)
     {
-        $station = new \Model\StationRepository();
-        $data = $station->findById(1);
-        print_r($data->getCard()->getId());exit;
+        $data = '{"model":"station","action":"card_found","data":{"id":"1"}}';
+        $request = json_decode($data);
+        $station = new \Model\Station();
         $response = [
-            'message' => ''
+            'message' => $station->CardFound($request->data)
         ];
 
         echo $response['message'];

@@ -31,6 +31,12 @@ class User
         return $this->is_admin;
     }
 
+    public function setIsAdmin($isAdmin)
+    {
+        $this->is_admin = $isAdmin;
+        return $this;
+    }
+
     public function setId($id)
     {
         $this->id = $id;
@@ -42,6 +48,10 @@ class User
     {
         $this->balance = $balance;
 
+        return $this;
+    }
+
+    public function save(){
         return $this;
     }
 }

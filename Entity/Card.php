@@ -60,6 +60,7 @@ class Card
     public function setUser(User $user)
     {
         $this->user = $user;
+        return $this;
     }
 
 

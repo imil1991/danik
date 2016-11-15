@@ -36,13 +36,32 @@ class StationRepository
      */
     public function findById($id)
     {
-        $result = new Station;
         $station = $this->collection->findOne(['stationId' => $id]);
-        $result->setCard((new Card())->setId($station['_id']));
-        $result->setId($station['_id']);
-        $result->setImei($station['imei']);
-        $result->setPlugs((new Plug())->setPlugs($station['plugStatus']));
-        return $result;
+        return $station;
+    }
+
+    /**
+     * @return array
+     */
+    public function findAll()
+    {
+        $stations = $this->collection->find();
+        return $stations;
+    }
+
+    /**
+     * @param array $filter
+     * @param array $data
+     * @return $this
+     */
+    public function update(array $filter, array $data)
+    {
+        try {
+            $this->collection->update($filter, ['$set' => $data]);
+        } catch (\MongoCursorException $e){
+            echo $e->getMessage();
+        }
+        return $this;
     }
 
 

@@ -18,15 +18,43 @@ class UserRepository
      */
     public function __construct()
     {
-        $this->db  = new \MongoDB\Driver\Manager("mongodb://5.101.105.227:27017");
+
+        $m  = new \MongoClient("mongodb://5.101.105.227:27017");
+        $this->db  = $m->{'eline-dev'};
+        $this->collection = $this->db->{'users'};
     }
 
 
+    /**
+     * @param $id
+     * @return Station
+     */
     public function findById($id)
     {
-        $query = new MongoDB\Driver\Query(['id' => $id]);
-        $result = $this->db->executeQuery("eline-dev.users", $query)->toArray();
-        return $result;
+        return $this->collection->findOne(['_id' => $id]);
+    }
+
+    /**
+     * @return array
+     */
+    public function findAll()
+    {
+        return $this->collection->find();
+    }
+
+    /**
+     * @param array $filter
+     * @param array $data
+     * @return $this
+     */
+    public function update(array $filter, array $data)
+    {
+        try {
+            $this->collection->update($filter, ['$set' => $data]);
+        } catch (\MongoCursorException $e){
+            echo $e->getMessage();
+        }
+        return $this;
     }
 
 }

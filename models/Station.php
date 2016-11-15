@@ -1,10 +1,14 @@
 <?php
 namespace Model;
 use Entity\Plug;
-require_once 'Entity/Card.php';
-require_once 'Entity/Plug.php';
-require_once 'Entity/Station.php';
-require_once 'Entity/User.php';
+include_once '../models/CardRepository.php';
+include_once '../models/UserRepository.php';
+include_once '../models/StationRepository.php';
+include_once '../models/Card.php';
+include_once '../Entity/User.php';
+include_once '../Entity/Card.php';
+include_once '../Entity/Station.php';
+include_once '../Entity/Plug.php';
 /**
  * Created by PhpStorm.
  * User: bona
@@ -13,12 +17,45 @@ require_once 'Entity/User.php';
  */
 class Station {
 
+    const SEPARATOR = ':';
+
+    /**
+     * @var \Entity\Station
+     */
     private $station;
 
     public function __construct($id)
     {
-        $this->station = new \Entity\Station;
-        $this->station->setId($id);
+        $this->setStation($id);
+    }
+
+    /**
+     * @param $id
+     * @return $this
+     */
+    public function setStation($id)
+    {
+        $station = new \Entity\Station();
+        $stationData = new \Model\StationRepository();
+        $stationData = $stationData->findById($id);
+        $station->setId($stationData['stationId']);
+        $station->setImei($stationData['imei']);
+        $station->setCard(
+            (new Card())
+                ->setCard($stationData['processCardId'])
+                ->getCard()
+        );
+
+        $this->station = $station;
+        return $this;
+    }
+
+    /**
+     * @return \Entity\Station
+     */
+    public function getStation()
+    {
+        return $this->station;
     }
 
     /** Меняет статус розетки пример:
@@ -31,7 +68,7 @@ class Station {
         $state = $data->station ? 'UNBLOCK' : 'BLOCK';
         $response = [
             'client_id' => $data->station,
-            'message' => self::prepareMessage($state.'::'.$data->plug)
+            'message' => self::prepareMessage($state.self::SEPARATOR.$data->plug)
         ];
 
         return $response;
@@ -43,12 +80,15 @@ class Station {
      * @param $data
      * @return mixed
      */
-    public static function CardFound($data)
+    public function CardFound($data)
     {
-        $parse = unpack('C*',$data->id);
-        $cardInfo = ['balance' => 100, 'admin' => 1 ];
-        $pack = pack('C*', $cardInfo['balance']);
-        $response['message'] = 'CARD'.$data->id. $pack .$cardInfo['admin'].'\r\n';
+        $card = new Card();
+        $card->setCard($data->id);
+        $message = 'CARD'
+            .self::SEPARATOR.$card->getCard()->getId()
+            .self::SEPARATOR.$card->getCard()->getUser()->getBalance()
+            .self::SEPARATOR.$card->getCard()->getUser()->getIsAdmin();
+        $response['message'] = self::prepareMessage($message);
 
         return $response;
 
@@ -60,17 +100,17 @@ class Station {
      */
     public function Start($data)
     {
-        $this->station->setPlugs(
-            (new Plug)
-                ->setPlugStatus($data->id, Plug::STATUS_BUSY)
-        );
-        $card = $this->station->getCard();
-        $user = $card->getUser();
-        $newBalance = $user->getBalance() - 1;
-        $user->setBalance($newBalance);
+        $this->station->getCard()->getUser()->setBalance(
+            $this->station->getCard()->getUser()->getBalance() - 1
+        )->save();
         $response = [
-            'message' => self::prepareMessage('EDIT'.$card->getCode().$newBalance.$user->getIsAdmin()),
-            'client' => 'all'
+            'message' => self::prepareMessage(
+                'EDIT'
+                .self::SEPARATOR.$this->station->getCard()->getId()
+                .self::SEPARATOR.$this->station->getCard()->getUser()->getBalance()
+                .self::SEPARATOR.$this->station->getCard()->getUser()->getIsAdmin()
+            ),
+        'client' => 'all'
         ];
 
         return $response;
