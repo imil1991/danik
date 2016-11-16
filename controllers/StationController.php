@@ -17,10 +17,8 @@ class StationController
     {
         $data = '{"model":"station","action":"card_found","data":{"id":"1"}}';
         $request = json_decode($data);
-        $station = new \Model\Station();
-        $response = [
-            'message' => $station->CardFound($request->data)
-        ];
+        $station = new \Model\Station($request->data->id);
+        $response =  $station->Start($request->data);
 
         echo $response['message'];
     }

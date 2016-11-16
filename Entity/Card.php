@@ -64,4 +64,9 @@ class Card
     }
 
 
+    public function save(){
+        $this->getUser()->save();
+    }
+
+
 }

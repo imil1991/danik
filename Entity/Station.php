@@ -1,5 +1,7 @@
 <?php
 namespace Entity;
+use Model\StationRepository;
+
 /**
  * Created by PhpStorm.
  * User: bona
@@ -11,7 +13,11 @@ class Station
     /**
      * @var int
      */
-    private $id;
+    private $stationId;
+    /**
+     * @var int
+     */
+    private $processCardId;
     /**
      * @var int
      */
@@ -19,25 +25,29 @@ class Station
     /**
      * @var Plug
      */
-    private $plugs;
+    private $plugStatus;
+    /**
+     * @var Plug
+     */
+    private $plugStatusMessage;
 
     /**
      * @var Card
      */
     private $card;
 
-    public function getId()
+    public function getStationId()
     {
-        return $this->id;
+        return $this->stationId;
     }
 
     /**
-     * @param $id
+     * @param $stationId
      * @return $this
      */
-    public function setId($id)
+    public function setStationId($stationId)
     {
-        $this->id = $id;
+        $this->stationId = $stationId;
 
         return $this;
     }
@@ -58,20 +68,52 @@ class Station
         return $this;
     }
 
-    /**
-     * @return Plug
-     */
-    public function getPlugs()
+    public function getProcessCardId()
     {
-        return $this->plugs;
+        return $this->processCardId;
     }
 
     /**
-     * @param Plug $plug
+     * @param $processCardId
+     * @return $this
      */
-    public function setPlugs(Plug $plug)
+    public function setProcessCardId($processCardId)
     {
-        $this->plugs = $plug;
+        $this->processCardId = $processCardId;
+
+        return $this;
+    }
+
+    public function getPlugStatusMessage()
+    {
+        return $this->plugStatusMessage;
+    }
+
+    /**
+     * @param $plugStatusMessage
+     * @return $this
+     */
+    public function setPlugStatusMessage($plugStatusMessage)
+    {
+        $this->plugStatusMessage = $plugStatusMessage;
+
+        return $this;
+    }
+
+    /**
+     * @return Plug
+     */
+    public function getPlugStatus()
+    {
+        return $this->plugStatus;
+    }
+
+    /**
+     * @param Plug $plugStatus
+     */
+    public function setPlugs(Plug $plugStatus)
+    {
+        $this->plugStatus = $plugStatus;
     }
 
     /**
@@ -98,6 +140,23 @@ class Station
      */
     public function getMessageId()
     {
-        return 'Станция №'.$this->id.PHP_EOL;
+        return 'Станция №'.$this->getStationId().PHP_EOL;
+    }
+
+    public function toArray()
+    {
+        return [
+            'stationId' => $this->getStationId(),
+            'imei' => $this->getIemi(),
+            'plugStatus' => $this->getPlugStatus()->getPlugs(),
+            'plugStatusMessage' => $this->getPlugStatusMessage(),
+            'processCartId' => $this->getProcessCardId()
+        ];
+    }
+
+    public function save(){
+        $this->getCard()->save();
+        $rep = new StationRepository();
+        $rep->update(['stationId'=>$this->getStationId()],$this->toArray());
     }
 }

@@ -41,11 +41,6 @@ class CardRepository
     public function findAll()
     {
         $cards = $this->collection->find();
-        $i=1;
-        foreach($cards as $card){
-            print_r($card);
-            $this->update(['id' => $card['id']],['id' => $i++]);
-        }
         return $cards;
     }
 

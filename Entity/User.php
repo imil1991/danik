@@ -9,6 +9,8 @@
 namespace Entity;
 
 
+use Model\UserRepository;
+
 class User
 {
 
@@ -18,7 +20,7 @@ class User
 
     public function getId()
     {
-        $this->id;
+        return $this->id;
     }
 
     public function getBalance()
@@ -51,7 +53,18 @@ class User
         return $this;
     }
 
+    public function toArray()
+    {
+        return [
+            'balance' => $this->getBalance(),
+            'role' => [$this->getIsAdmin()],
+        ];
+    }
+
     public function save(){
+        $rep = new UserRepository();
+        $rep->update(['_id'=>$this->getId()],$this->toArray());
+
         return $this;
     }
 }

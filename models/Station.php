@@ -37,9 +37,14 @@ class Station {
     {
         $station = new \Entity\Station();
         $stationData = new \Model\StationRepository();
-        $stationData = $stationData->findById($id);
-        $station->setId($stationData['stationId']);
+        $stationData = $stationData->findById((int) $id);
+        $station->setStationId($stationData['stationId']);
         $station->setImei($stationData['imei']);
+        $station->setPlugStatusMessage($stationData['plugStatusMessage']);
+        $station->setPlugs(
+            (new Plug())
+                ->setPlugs($stationData['plugStatus'])
+        );
         $station->setCard(
             (new Card())
                 ->setCard($stationData['processCardId'])
@@ -84,6 +89,7 @@ class Station {
     {
         $card = new Card();
         $card->setCard($data->id);
+        $this->station->setProcessCardId((int) $data->id)->save();
         $message = 'CARD'
             .self::SEPARATOR.$card->getCard()->getId()
             .self::SEPARATOR.$card->getCard()->getUser()->getBalance()
@@ -102,7 +108,8 @@ class Station {
     {
         $this->station->getCard()->getUser()->setBalance(
             $this->station->getCard()->getUser()->getBalance() - 1
-        )->save();
+        );
+        $this->station->getPlugStatus()->setPlugStatus($data->id,Plug::STATUS_BUSY);
         $response = [
             'message' => self::prepareMessage(
                 'EDIT'
@@ -113,6 +120,8 @@ class Station {
         'client' => 'all'
         ];
 
+        $this->station->save();
+
         return $response;
     }
 
@@ -121,10 +130,10 @@ class Station {
      */
     public function Stop($data)
     {
-        $this->station->setPlugs(
-            (new Plug)
-                ->setPlugStatus($data->id, Plug::STATUS_OPEN)
-        );
+        $this->station
+            ->setProcessCardId(0)
+            ->getPlugStatus()->setPlugStatus($data->id,Plug::STATUS_OPEN);
+        $this->station->save();
         $this->log('Окончание потребления тока'.PHP_EOL
             .'Потреблённая мощность - ' . $data->power . ' кВт*час');
      }
